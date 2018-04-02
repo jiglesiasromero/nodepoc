@@ -1,0 +1,3 @@
+{
+  "presets": ["@spotahome/babel-preset-spotahome"]
+}

@@ -1,39 +1,37 @@
-import should from 'should';
 import request from 'request';
-var expect = require('chai').expect;
-var util = require('util');
+import { should } from 'chai';
 
 var baseUrl = 'https://swapi.co/api';
 var baseUrlSah = 'https://staging.bookings.spotahome.com'
 
 describe('returns luke', function() {
-    before(() => {
-      this.id = 10
-    });
+  before(() => {
+    this.id = 10
+  });
 
-    it('returns luke', async () => {
-      let response
-      try {
-        response = await request.get({ url: `${baseUrl}/people/1/` })
-      } catch (e) {
-        console.log('err', e)
-        throw e
-      }
+  it('returns luke', async () => {
+    let response
+    try {
+      response = await request.get({ url: `${baseUrl}/people/1/` })
+    } catch (e) {
+      console.log('err', e)
+      throw e
+    }
 
-      console.log(response.body)
-
-
+    console.log(response.body)
 
 
-            // 		var bodyObj = JSON.parse(body);
-            // 		expect(bodyObj.name).to.equal("Luke Skywalker");
-            // 		expect(bodyObj.hair_color).to.equal("blond");
-            //         expect(response.statusCode).to.equal(200);
-            //         console.log(response.headers.date);
-            //         console.log(body);
-            //     done();
-            // });
-    });
+
+
+          // 		var bodyObj = JSON.parse(body);
+          // 		expect(bodyObj.name).to.equal("Luke Skywalker");
+          // 		expect(bodyObj.hair_color).to.equal("blond");
+          //         expect(response.statusCode).to.equal(200);
+          //         console.log(response.headers.date);
+          //         console.log(body);
+          //     done();
+          // });
+  });
 
     // it('returns walker', () => {
     //     console.log(this.id)
