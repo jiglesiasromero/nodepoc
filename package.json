@@ -4,17 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register **/*.test.js"
+    "lint:fix": "eslint --fix",
+    "test": "cross-env BABEL_ENV=test NODE_ENV=development jest --config .jestrc.js",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "chai": "^3.5.0",
+    "@spotahome/babel-preset-spotahome": "^0.3.1",
+    "@spotahome/eslint-config-spotahome": "^0.2.0",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
-    "mocha": "^2.5.3",
-    "request": "^2.74.0",
-    "should": "^10.0.0"
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.2",
+    "prettier": "^1.11.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "luxon": "^1.0.0"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "presets": ["@spotahome/babel-preset-spotahome"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@root": "./",
+          "@req": "./requests"
+        }
+      }
+    ]
+  ]
+}
